@@ -1,9 +1,7 @@
 import React from "react";
 
 const HighScoreTable = (props) =>{
-   let descendingAllCountryScores = props.country.scores.sort(function (a, b) {
-     return b.s - a.s;
-   });
+
     return (
       <table>
         <thead></thead>
@@ -14,7 +12,7 @@ const HighScoreTable = (props) =>{
         </caption>
 
         <tbody>
-          {descendingAllCountryScores.map((player, index) => {
+          {props.country.scores.map((player, index) => {
             return (
               <tr key={index}>
                 <td className="TableData">{player.n}</td>
